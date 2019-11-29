@@ -39,3 +39,29 @@ Ahora ya podemos comprobar si la instalación del Apache2 se ha hecho de manera 
 Pudes encontrar tu ip o dns en esta sección una vez que la máquina está encendida:
 
 ![](awsImages/aws-conexion.png)
+
+## Instalar MySQL
+
+Una vez mas, empezaremos con el comando de instalación, en este caso para MySQL:
+
+    sudo apt-get install mysql-server mysql-client
+    
+![](awsImages/aws-instalar-mysql.png)
+
+Con este comando instalaremos tanto el servidor como el cliente de MySQL.
+
+Al finalizar la instalación ejecutaremos el siguiente comando:
+
+    sudo mysql_secure_installation
+    
+![](awsImages/aws-mysql-secure.png)
+
+Con este comando borraremos algunos parametros peligrosos y aseguraremos el acceso ala base de datos.
+
+Después te pedirá que completes unos pasos. Hazlo de la siguiente manera:
+
+![](awsImages/aws-secure-password.png)
+
+![](awsImages/aws-secure-permissions.png)
+
+![](awsImages/aws-secure-finish.png)
