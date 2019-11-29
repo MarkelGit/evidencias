@@ -1,18 +1,22 @@
 # Instalacion de APACHE2, MYSQL, PHP Y PHPMYADMIN.
-Estos son los pasos a seguir:
-
 Para poder empezar con la instalación primero debemos actualizar los paquetes.
 
 ![](awsImages/aws-update.png)
 
-  - [Instalar Apache2](#instalar apache2)
+Una vez actualizado podemos comenzar con las siguientes instalaciones:
+
+  - [Instalar Apache2](#instalar-apache2)
+  - [Instalar MySQL](#instalar-mysql)
+  - [Instalar PHP](#instalar-php)
+  - [Instalar phpmyadmin](#instalar-phpmyadmin)
 
 ## Instalar Apache2
 
-### 1. En nuestro servidor
-Para conocer los **datos de acceso SSH** del servidor en GUEBS debes accede al **panel de control** de GUEBS Haz click ahí:
+Comenzaremos con el comando para instalar Apache2:
+
+    sudo apt install apache2
    
-![](images/doc10/doc10-panel-de-control-guebs.png)
+![](awsImages/aws-instalar-apache2.png)
 
 Copia los datos de conexión:
 
