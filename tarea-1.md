@@ -18,6 +18,10 @@ Comenzaremos con el comando para instalar Apache2:
    
 ![](awsImages/aws-instalar-apache2.png)
 
+Para comprobar que funciona correctamente primero accederemos al **wizard de AWS** para comprobar que HTTP y HTTPS estan habilitados:
+
+![](awsImages/aws-puertos-wizard.png)
+
 Copia los datos de conexión:
 
 ![](images/doc10/doc10-panel-de-contro-datos-de-acceso-ssh.png)
