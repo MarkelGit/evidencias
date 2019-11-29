@@ -26,7 +26,7 @@ Una vez aquí clickaremos en `Edit`:
 
 ![](awsImages/aws-puertos-habilitados.png)
 
-Para acabar, con `Add rule` añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añdir **HTTPS**:
+Para acabar, con `Add rule` añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añadir **HTTPS**:
 
 ![](awsImages/aws-configurar-puertos.png)
 
@@ -138,7 +138,7 @@ Primero ejecutaremos el comando de instalación:
 
 Esto nos hará algunas preguntas que debemos rellenar:
 
-### ¡Aviso! En el primer mensaje debemos seleccionar Apache2 pero aunque parezca que ya está seleccionado no lo está. Para seleccionarlo pulsa `espacio` una vez que estés sobre Apache2 y le saldrá un puntito. Ahora que si está seleccionado presiona`Tab` y despué `Enter`.
+### ¡Aviso! En el primer mensaje debemos seleccionar Apache2 pero aunque parezca que ya está seleccionado no lo está. Para seleccionarlo pulsa `espacio` una vez que estés sobre Apache2 y le saldrá un puntito. Ahora que si está seleccionado presiona `Tab` y después `Enter`.
 
 ![](awsImages/aws-phpmyadmin-server.png)
 
