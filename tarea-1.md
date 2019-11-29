@@ -60,7 +60,7 @@ Con este comando borraremos algunos parametros peligrosos y aseguraremos el acce
 
 Después te pedirá que completes unos pasos. Hazlo de la siguiente manera:
 
-![](awsImages/aws-secure-password.png)
+![](awsImages/aws-secure-password-condition.png)
 
 ![](awsImages/aws-secure-permissions.png)
 
