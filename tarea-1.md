@@ -22,11 +22,11 @@ Para comprobar que funciona correctamente primero accederemos al **wizard de AWS
 
 ![](awsImages/aws-puertos-wizard.png)
 
-Una vez aquí clickaremos en **Edit**:
+Una vez aquí clickaremos en `Edit`:
 
 ![](awsImages/aws-puertos-habilitados.png)
 
-Para acabar, con **Add rule** añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añdir **HTTPS**:
+Para acabar, con `Add rule` añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añdir **HTTPS**:
 
 ![](awsImages/aws-configurar-puertos.png)
 
@@ -65,3 +65,49 @@ Después te pedirá que completes unos pasos. Hazlo de la siguiente manera:
 ![](awsImages/aws-secure-permissions.png)
 
 ![](awsImages/aws-secure-finish.png)
+
+## Instalar PHP
+
+Ahora toca instalar **PHP**, para ello comenzaremos con el comando de instalación de nuevo:
+
+    sudo apt install php libapache2-mod-php php-mysql
+
+![](awsImages/aws-instalar-php.png)
+
+Si tus archivos van a ser de tipo **.php** es recomendable que modifiques el archivo **dir.conf** para dar prioridad a dicho tipo de archivos.
+
+Para conseguir esto ejecutaremos el siguiente comando:
+
+    sudo nano /etc/apache2/mods-enabled/dir.conf
+    
+![](awsImages/aws-configurar-dirconf.png)
+
+Con esto te saldra algo como esto:
+
+![](awsImages/aws-original-dirconf.png)
+
+Cambiaremos de sitio el archivo **index.php** colocándolo en primer lugar y lo guardaremos:
+
+![](awsImages/aws-edited-dirconf.png)
+
+Seguidamente reiniciaremos el servicio de Apache2 para que los cambios se efectuen:
+
+    sudo systemctl restart apache2
+
+![](awsImages/aws-restart-apache2.png)
+
+Una vez reiniciado comprobaremos el estado del servicio con este otro comando:
+
+    sudo systemctl status apache2
+
+![](awsImages/aws-apache2-status.png)
+
+Ahora comprobaremos que estos cambios son eficaces. Para esto, crearemos un archivo de tipo **.php**, el mas útil de ellos es `info.php`:
+
+    sudo nano /var/www/html/info.php
+    
+ ![](awsImages/aws-infophp.png)
+ 
+ Esto creará una pagina en blanco donde escribiremos el siguiente código:
+ 
+ ![](awsImages/aws-edit-infophp.png)
