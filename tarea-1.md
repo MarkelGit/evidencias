@@ -186,7 +186,7 @@ Ahora podemos entrar a phpmyadmin desde el navegador de esta manera:
     
 Tendremos que iniciar sesión con el **nombre de usuario de phpmyadmin** y contraseña configuradas anteriormente:
 
-![](awsImages/aws-phpmyadmin-sesion.png)
+![](awsImages/aws-phpmyadmin-inicio.png)
 
 Ya estamos dentro y podemos editar nuestros datos:
 
