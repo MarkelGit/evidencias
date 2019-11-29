@@ -5,7 +5,7 @@ Para poder empezar con la instalación primero debemos actualizar los paquetes.
 
 ![](awsImages/aws-update.png)
 
-  - [Instalar Apache2](#instalar apache2)
+  - [Instalar Apache2](#instalar-apache2)
 
 ## Instalar Apache2
 
