@@ -66,6 +66,12 @@ Después te pedirá que completes unos pasos. Hazlo de la siguiente manera:
 
 ![](awsImages/aws-secure-finish.png)
 
+Si quisieras comprobar tu versión de **MySQL** puedes hacerlo con esté comando:
+
+    mysql --version
+    
+![](awsImages/aws-mysql-version.png)
+
 ## Instalar PHP
 
 Ahora toca instalar **PHP**, para ello comenzaremos con el comando de instalación de nuevo:
@@ -152,8 +158,36 @@ También es posible que te salga alguno de los siguiente mensajes, responde de e
 
 ![](awsImages/aws-phpmyadmin-username.png)
 
+Este el nombre de usuario para tu **base de datos**.
+
 ![](awsImages/aws-phpmyadmin-name.png)
+
+Este es el nombre de usuario de **phpmyadmin**.
 
 ![](awsImages/aws-phpmyadmin-username-set.png)
 
+Aquí seleccionamos lo recomendado que es **Unix socket**.
+
 ![](awsImages/aws-conexion-phpmyadmin.png)
+
+Ahora habilitaremos explícitamente las conexiones **PHP** con el siguiente comando:
+
+    sudo phpenmod mbstring
+
+![](awsImages/aws-phpmyadmin-mbstring.png)
+
+Para guardar los cambios reiniciaremos el servicio de apache:
+
+    sudo systemctl restart apache2
+    
+Ahora podemos entrar a phpmyadmin desde el navegador de esta manera:
+
+    http://ip_de_tu_servidor/phpmyadmin o http://dns_de_tu_servidor/phpmyadmin
+    
+Tendremos que iniciar sesión con el **nombre de usuario de phpmyadmin** y contraseña configuradas anteriormente:
+
+![](awsImages/aws-phpmyadmin-sesion.png)
+
+Ya estamos dentro y podemos editar nuestros datos:
+
+![](awsImages/aws-phpmyadmin-bbdd.png)
