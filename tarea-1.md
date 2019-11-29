@@ -106,14 +106,16 @@ Ahora comprobaremos que estos cambios son eficaces. Para esto, crearemos un arch
 
     sudo nano /var/www/html/info.php
     
- ![](awsImages/aws-infophp.png)
+![](awsImages/aws-infophp.png)
  
- Esto creará una pagina en blanco donde escribiremos el siguiente código:
+Esto creará una pagina en blanco donde escribiremos el siguiente código:
  
- ![](awsImages/aws-edit-infophp.png)
+![](awsImages/aws-edit-infophp.png)
 
 Cuando acabes guarda el archivo con `Ctrl+o` y sal de el con `Ctrl+x`.
 
 Ahora podremos ver ese archivo en nuestro navegador escribiendo lo siguiente:
 
     http://ip_de_tu_servidor/info.php o http://dns_de_tu_servidor/info.php
+
+![](awsImages/aws-edit-infophp.png)
