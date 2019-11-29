@@ -118,4 +118,4 @@ Ahora podremos ver ese archivo en nuestro navegador escribiendo lo siguiente:
 
     http://ip_de_tu_servidor/info.php o http://dns_de_tu_servidor/info.php
 
-![](awsImages/aws-edit-infophp.png)
+![](awsImages/aws-infophp-comprobacion.png)
