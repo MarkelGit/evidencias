@@ -86,7 +86,7 @@ Con esto te saldra algo como esto:
 
 ![](awsImages/aws-original-dirconf.png)
 
-Cambiaremos de sitio el archivo **index.php** colocándolo en primer lugar y lo guardaremos:
+Cambiaremos de sitio el archivo **index.php** colocándolo en primer lugar y lo guardaremos con `Ctrl+o` y saldremos con `Ctrl+x`:
 
 ![](awsImages/aws-edited-dirconf.png)
 
@@ -111,3 +111,9 @@ Ahora comprobaremos que estos cambios son eficaces. Para esto, crearemos un arch
  Esto creará una pagina en blanco donde escribiremos el siguiente código:
  
  ![](awsImages/aws-edit-infophp.png)
+
+Cuando acabes guarda el archivo con `Ctrl+o` y sal de el con `Ctrl+x`.
+
+Ahora podremos ver ese archivo en nuestro navegador escribiendo lo siguiente:
+
+    http://ip_de_tu_servidor/info.php o http://dns_de_tu_servidor/info.php
