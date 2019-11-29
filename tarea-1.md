@@ -108,7 +108,7 @@ Ahora comprobaremos que estos cambios son eficaces. Para esto, crearemos un arch
     
 ![](awsImages/aws-infophp.png)
  
-Esto creará una pagina en blanco donde escribiremos el siguiente código:
+Esto creará una página en blanco donde escribiremos el siguiente código:
  
 ![](awsImages/aws-edit-infophp.png)
 
@@ -119,3 +119,41 @@ Ahora podremos ver ese archivo en nuestro navegador escribiendo lo siguiente:
     http://ip_de_tu_servidor/info.php o http://dns_de_tu_servidor/info.php
 
 ![](awsImages/aws-infophp-comprobacion.png)
+
+## Instalar phpmyadmin
+
+Por último, instalaremos phpmyadmin para tener la interfaz gráfica de la base de datos y que nos resulte mas sencillo guardar los datos.
+
+Primero ejecutaremos el comando de instalación:
+
+    sudo apt-get install phpmyadmin php-mbstring php-gettext
+
+![](awsImages/aws-instalar-phpmyadmin.png)
+
+Esto nos hará algunas preguntas que debemos rellenar:
+
+### ¡Aviso! En el primer mensaje debemos seleccionar Apache2 pero aunque parezca que ya está seleccionado no lo está. Para seleccionarlo pulsa `espacio` una vez que estés sobre Apache2 y le saldrá un puntito. Ahora que si está seleccionado presiona`Tab` y despué `Enter`.
+
+![](awsImages/aws-phpmyadmin-server.png)
+
+Escoge **yes** en este otro mensaje:
+
+![](awsImages/aws-configurar-phpmyadmin.png)
+
+Ahora debería de pedirte que introduzcas una contraseña. La contraseña es probable que tenga que contener al menos una mayuscula, un caracter especial y algún numero. Además muy posiblemente tenga que tener mas de 8 caracteres.
+
+![](awsImages/aws-phpmyadmin-password.png)
+
+Como siguiente paso debes confirmar esa contraseña:
+
+![](awsImages/aws-phpmyadmin-password-confirmation.png)
+
+También es posible que te salga alguno de los siguiente mensajes, responde de esta manera:
+
+![](awsImages/aws-phpmyadmin-username.png)
+
+![](awsImages/aws-phpmyadmin-name.png)
+
+![](awsImages/aws-phpmyadmin-username-set.png)
+
+![](awsImages/aws-conexion-phpmyadmin.png)
