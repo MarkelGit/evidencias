@@ -18,28 +18,24 @@ Comenzaremos con el comando para instalar Apache2:
    
 ![](awsImages/aws-instalar-apache2.png)
 
-Para comprobar que funciona correctamente primero accederemos al **wizard de AWS** para comprobar que HTTP y HTTPS estan habilitados:
+Para comprobar que funciona correctamente primero accederemos al **wizard de AWS** para comprobar que HTTP y HTTPS están habilitados:
 
 ![](awsImages/aws-puertos-wizard.png)
 
-Copia los datos de conexión:
+Una vez aquí clickaremos en **Edit**:
 
-![](images/doc10/doc10-panel-de-contro-datos-de-acceso-ssh.png)
+![](awsImages/aws-puertos-habilitados.png)
 
-Si no recuerdas la contraseña del usuario SSH puedes poner una nueva pulsando en `Definir contraseña`
+Para acabar, con **Add rule** añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añdir **HTTPS**:
 
-Abre un programa de **terminal** de linea de comandos que permita ejecutar el comando SSH. (OpenSSH client, Windows PowerShell o [MINGW](https://www.google.com/search?q=MINGW)) y ejecuta el comando SSH:
+![](awsImages/aws-configurar-puertos.png)
 
-    ssh <usuario>@<ip> -p <puerto>
+Ahora ya podemos comprobar si la instalación del Apache2 se ha hecho de manera correcta, para ello escribe lo siguiente en tu navegador:
 
-Te pedirá la contraseña.
+    http://ip_de_tu_servidor o http://dns_de_tu_servidor
+    
+![](awsImages/aws-apache2-comprobacion.png)
 
-Una vez conectado al servidor genera las llaves publica y privada mediante el comando `ssh-keygen`. Ponle un **nombre al archivo** pero y no escribas nada cuando te pida la `passphrase`, solamente pulsa Enter.
+Pudes encontrar tu ip o dns en esta sección una vez que la máquina está encendida:
 
-![](images/doc10/doc10-conectarse-al-servidor-por-ssh.png)
-
-Esto habrá generado un par de claves publica-privada en el directorio actual. Escribiendo `ls -l` podrás visualizar una lista de los archivos.
-
-![](images/doc10/doc10-claves-publica-y-privada.png)
-
-Ejecuta el comando **`cat`** seguido del nombre del archivo de la clave pública para mostrar su contenido, o abre el archivo con un editor como `nano`. Copia el contenido para llevarlo a [GitHub](https://github.com).
+![](awsImages/aws-conexion.png)
