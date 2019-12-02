@@ -6,11 +6,9 @@ En esta ocasión haremos que nuestra IP no varie cada vez que encendemos la maqu
 
 ## Alquilar IP Elastica
 
-Comenzaremos con el comando para instalar Apache2:
-
-    sudo apt install apache2
+Para empezar, en el panel de control de aws entraremos en **Elastic IPs**:
    
-![](awsImages/aws-instalar-apache2.png)
+![](awsImages2/aws-instalar-apache2.png)
 
 Para comprobar que funciona correctamente primero accederemos al **wizard de AWS** para comprobar que HTTP y HTTPS están habilitados:
 
