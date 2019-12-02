@@ -24,7 +24,7 @@ Para comprobar que funciona correctamente primero accederemos al **wizard de AWS
 
 Una vez aquí clickaremos en `Edit`:
 
-![](awsImage1s1/aws-puertos-habilitados.png)
+![](awsImages1/aws-puertos-habilitados.png)
 
 Para acabar, con `Add rule` añadiremos una regla nueva donde seleccionaremos **HTTP** en la sección de tipo. Repite este paso para añadir **HTTPS**:
 
