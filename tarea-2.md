@@ -1,14 +1,14 @@
-# IP Elastica.
-En esta ocasión haremos que nuestra IP no varie cada vez que encendemos la maquina virtual. 
+# IP Elástica.
+En esta ocasión haremos que nuestra IP no varíe cada vez que encendemos la máquina virtual. 
 
 Para conseguir esto completaremos dos pasos:
 
-  - [Alquilar IP Elastica](#alquilar-ip-elastica)
-  - [Asociar IP Elastica](#asociar-ip-elastica)
+  - [Alquilar IP Elástica](#alquilar-ip-elastica)
+  - [Asociar IP Elástica](#asociar-ip-elastica)
 
-## Alquilar IP Elastica
+## Alquilar IP Elástica
 
-Para empezar, en el panel de navegación de aws entraremos en `Elastic IPs`:
+Para empezar, en el **panel de navegación de aws** entraremos en `Elastic IPs`:
    
 ![](awsImages2/aws-panel-de-navegacion.png)
 
@@ -22,20 +22,24 @@ Nosotros elegiremos `Amazon´s pool of IPv4 address` para que Amazon nos proporc
 
 ![](awsImages2/aws-amazons-pool.png)
 
-Una vez seleccionada esa opción continuaremos clickando en `Allocate` y ya tendremos la IP elastica alquilada:
+Una vez seleccionada esa opción continuaremos clickando en `Allocate` y ya tendremos la IP elástica alquilada:
 
 ![](awsImages2/aws-allocated-ip.png)
 
-## Asociar IP Elastica
+## Asociar IP Elástica
 
-Comenzaremos con el comando para instalar Apache2:
-
-    sudo apt install apache2
+Una vez tengamos alquilada la IP elástica tenemos que asociarla con la máquina virtual que queremos usarla:
    
-![](awsImages/aws-instalar-apache2.png)
+![](awsImages2/aws-associate-elastic-ip-address.png)
 
-Para comprobar que funciona correctamente primero accederemos al **wizard de AWS** para comprobar que HTTP y HTTPS están habilitados:
+En la ventana de configuración configuraremos los datos seleccionando `Instance` en la primera opción y rellenando los campos con la ID e IP fija de nuestra máquina virtual:
 
-![](awsImages/aws-puertos-wizard.png)
+![](awsImages2/aws-associate-instance.png)
 
-Una vez aquí clickaremos en `Edit`:
+Ahora ya tendríamos la IP Elástica asociada con nuestra máquina virtual:
+
+![](awsImages2/aws-ip-associated.png)
+
+Ahora podemos ver la IP asociada en los detalles de nuestra máquina virtual:
+
+![](awsImages2/aws-instance.png)
