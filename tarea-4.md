@@ -1,45 +1,46 @@
-# IP Elástica.
-En esta ocasión haremos que nuestra IP no varíe cada vez que encendemos la máquina virtual. 
+# Virtual Hosts
 
-Para conseguir esto completaremos dos pasos:
+Primero crearemos los registros DNS (como en la tarea anterior).
 
-  - [Alquilar IP Elástica](#alquilar-ip-elastica)
-  - [Asociar IP Elástica](#asociar-ip-elastica)
+En esta ocasión crearemos dos DNS, uno para el cliente y uno para el servidor.
 
-## Alquilar IP Elástica
+![](awsImages4/aws-cliente-dns.png)
 
-Para empezar, en el **panel de navegación de aws** entraremos en `Elastic IPs`:
-   
-![](awsImages2/aws-panel-de-navegacion.png)
+![](awsImages4/aws-servidor-dns.png)
 
-Una vez dentro clickaremos sobre cualquiera de las dos opciones donde pone `Allocate Eladtic IP Address`:
+![](awsImages4/aws-dns-creado.png)
 
-![](awsImages2/aws-allocate-elastic-ip-address.png)
+Una vez creados los DNS crearemos una carpeta para el cliente y otra para el servidor (con sus respectivos index).
 
-Nos saldrá una ventana para elegir si queremos una IP ofrecida por Amazon o si queremos una IP propia que tengamos previamente guardada.
+![](awsImages4/aws-crear-carpetas.png)
 
-Nosotros elegiremos `Amazon´s pool of IPv4 address` para que Amazon nos proporcione una IP:
+Ahora tenemos que darle los permisos correctos a la carpeta **www**.
 
-![](awsImages2/aws-amazons-pool.png)
+![](awsImages4/aws-permisos-www.png)
 
-Una vez seleccionada esa opción continuaremos clickando en `Allocate` y ya tendremos la IP elástica alquilada:
+Seguidamente crearemos copias de los archivos de configuración para editar uno para el cliente y otro para el servidor.
 
-![](awsImages2/aws-allocated-ip.png)
+![](awsImages4/aws-crear-copias.png)
 
-## Asociar IP Elástica
+Es hora de editar cada archivo con el **ServerName** adecuado (el del registro DNS) y cambiar el **DocumentRoot** a la carpeta.
 
-Una vez tengamos alquilada la IP elástica tenemos que asociarla con la máquina virtual que queremos usarla:
-   
-![](awsImages2/aws-associate-elastic-ip-address.png)
+![](awsImages4/aws-cliente-dns.png)
 
-En la ventana de configuración configuraremos los datos seleccionando `Instance` en la primera opción y rellenando los campos con la ID e IP fija de nuestra máquina virtual:
+![](awsImages4/aws-servidor-dns.png)
 
-![](awsImages2/aws-associate-instance.png)
+Una vez configurados los archivos debemos habilitar esa configuración con el siguiente comando
 
-Ahora ya tendríamos la IP Elástica asociada con nuestra máquina virtual:
+`sh sudo a2ensite cliente.conf`
 
-![](awsImages2/aws-ip-associated.png)
+![](awsImages4/aws-a2ensite.png)
 
-Ahora podemos ver la IP asociada en los detalles de nuestra máquina virtual:
+Por último reiniciaremos el apache para que los cambios se guarden.
+`sh sudo systemctl restart apache2`
 
-![](awsImages2/aws-instance.png)
+![](awsImages4/aws-restart-apache.png)
+
+Ahora buscando en el navegador con el DNS creado nos deberian de salir los index.
+
+![](awsImages4/aws-cliente-html.png)
+
+![](awsImages4/aws-servidor-html.png)
