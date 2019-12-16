@@ -9,6 +9,7 @@ Una vez aquí crearemos el registro DNS rellenando con los datos requeridos, tal
   - TTL: es el tiempo de respuesta del seervidor.
   - Tipo: es el tipo del registro que explicaremos mas abajo.
   - Dirección: es la dirección del registro DNS.
+  
 ![](awsImages3/aws-crear-registro.png)
 
 #### TIPOS DE REGISTROS
