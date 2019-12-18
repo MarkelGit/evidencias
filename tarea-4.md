@@ -24,9 +24,9 @@ Seguidamente crearemos copias de los archivos de configuración para editar uno 
 
 Es hora de editar cada archivo con el **ServerName** adecuado (el del registro DNS) y cambiar el **DocumentRoot** a la carpeta.
 
-![](awsImages4/aws-cliente-dns.png)
+![](awsImages4/aws-cliente-conf.png)
 
-![](awsImages4/aws-servidor-dns.png)
+![](awsImages4/aws-servidor-conf.png)
 
 Una vez configurados los archivos debemos habilitar esa configuración con el siguiente comando
 
