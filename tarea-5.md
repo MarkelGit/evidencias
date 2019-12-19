@@ -1,46 +1,61 @@
 # Virtual Hosts
 
-Primero crearemos los registros DNS (como en la tarea anterior).
+Primero entraremos al wizard para añadir el puerto 21.
 
-En esta ocasión crearemos dos DNS, uno para el cliente y uno para el servidor.
+![](awsimages5/aws-wizard-amazon.png)
 
-![](awsImages4/aws-cliente-dns.png)
+Una vez aquí entrarems en **Inbound** y clickaremos sobre **Edit**.
 
-![](awsImages4/aws-servidor-dns.png)
+![](awsImages4/aws-edit-inbound.png)
 
-![](awsImages4/aws-dns-creado.png)
+Clickando sobre **Add Rule** podremos añadir un puerto mas, en este caso elegiremos **Custom TCP** con el puerto 21.
 
-Una vez creados los DNS crearemos una carpeta para el cliente y otra para el servidor (con sus respectivos index).
+Cuando lo tengamos añadido guardaremos los cambios con **Save**.
 
-![](awsImages4/aws-crear-carpetas.png)
+![](awsImages4/aws-add-rule.png)
 
-Ahora tenemos que darle los permisos correctos a la carpeta **www**.
+Podremos ver que se ha añadido la nueva norma.
 
-![](awsImages4/aws-permisos-www.png)
+![](awsImages4/aws-tcp-rule.png)
 
-Seguidamente crearemos copias de los archivos de configuración para editar uno para el cliente y otro para el servidor.
+Ahora procederemos a **instalar el servidor ftp en linux**.
 
-![](awsImages4/aws-crear-copias.png)
+Para ello utilizareos este comando:
 
-Es hora de editar cada archivo con el **ServerName** adecuado (el del registro DNS) y cambiar el **DocumentRoot** a la carpeta.
+`sudo apt-get install vsftp`
 
-![](awsImages4/aws-cliente-dns.png)
+![](awsImages4/aws-instalar-ftp.png)
 
-![](awsImages4/aws-servidor-dns.png)
+Es recomendable hacer una copia del archivo de configuración para tener un archivo limpio en el que trabajar.
 
-Una vez configurados los archivos debemos habilitar esa configuración con el siguiente comando
+`sudo cp /etc/www/vsftp.conf /etc/www/vsftp.conf.original`
 
-`sh sudo a2ensite cliente.conf`
+![](awsImages4/aws-crear-copia-conf.png)
 
-![](awsImages4/aws-a2ensite.png)
+Ahora crearemos los usuarios de tipo ftp para asignarles una ruta de carpeta y que se dirijan a esa al hacer la conexión.
 
-Por último reiniciaremos el apache para que los cambios se guarden.
-`sh sudo systemctl restart apache2`
+`sudo useradd -g ftp -d ruta_de_la_carpeta -c "comentario" nombre_usuario`
 
-![](awsImages4/aws-restart-apache.png)
+![](awsImages4/aws-crear-usuarios.png)
 
-Ahora buscando en el navegador con el DNS creado nos deberian de salir los index.
+Al crear los usuarios de esta manera hay que asignarles una contraseña manualmente.
 
-![](awsImages4/aws-cliente-html.png)
+`sudo passwd nombre_usuario`
 
-![](awsImages4/aws-servidor-html.png)
+![](awsImages4/aws-contraseñas.png)
+
+Ahora editaremos el archivo de configuración.
+
+`sudo nano /etc/var/vsftp.conf`
+
+![](awsImages4/aws-comando.nano.png)
+
+Con ese comando accederemos al archivo en el cual tienen que aparecer las siguientes líneas sin comentar:
+
+![](awsImages4/aws-configuracion.png)
+
+Una vez tengamos esas líneas saldremos del archivo con `Ctrl+O` y reiniciaremos el servicio:
+
+`sudo service vsftpd restart`
+
+![](awsImages4/aws-restart-ftp.png)
