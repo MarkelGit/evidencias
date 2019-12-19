@@ -48,7 +48,7 @@ Ahora editaremos el archivo de configuración.
 
 `sudo nano /etc/var/vsftp.conf`
 
-![](awsimages5/aws-comando.nano.png)
+![](awsimages5/aws-comando-nano.png)
 
 Con ese comando accederemos al archivo en el cual tienen que aparecer las siguientes líneas sin comentar:
 
