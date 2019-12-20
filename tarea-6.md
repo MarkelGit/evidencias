@@ -32,3 +32,5 @@ Una vez tengamos alguna base de datos la podemos bajar con el siguiente comando:
 `sudo mysqldump -u root -p nombre_de_la_base_de_datos > nombre_del_archivo_de_descarga.sql`
 
 ![](awsImages6/aws-descargar-bbdd.png)
+
+Y ya tendríamos la base de datos. En caso de querer ver el archivo podriamos verla con `ls`. 
