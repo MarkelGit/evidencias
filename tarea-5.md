@@ -59,3 +59,17 @@ Una vez tengamos esas líneas saldremos del archivo con `Ctrl+O` y reiniciaremos
 `sudo service vsftpd restart`
 
 ![](awsimages5/aws-restart-ftp.png)
+
+Ahora comprobaremos la conexión con **WinSCP**.
+
+Para ello introduce los datos del servidor como en la imagen (modificando nombres e IP para introducir los propios).
+
+![](awsimages5/aws-winscp-conexion.png)
+
+En el apartado de **Avnzado** iremos a la sección de **Conexión** y desactivaremos el **modo pasivo**.
+
+![](awsimages5/aws-modo-pasivo.png)
+
+Y una vez hecho eso guardaremos los ajustes y daremos en **Conectar** y veremos que se conecta a la carpeta especificada.
+
+![](awsimages5/aws-conexion.png)
