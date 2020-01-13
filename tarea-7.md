@@ -16,7 +16,7 @@ Para crear el script accederemos a la carpeta recien creada y ejecutaremos el si
 
 Al ejecutar el comando nos abrirá el archivo para escribir las líneas del script.
 
-![](awsImages7/aws-crear-script.png)
+![](awsImages7/aws-script.png)
 
 Ahora accederemos a la ubicación donde estara el ejecutable que iniciará el script.
 
