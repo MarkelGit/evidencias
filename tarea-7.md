@@ -30,7 +30,7 @@ Al entrar crearemos el ejecutable:
 
 En el archivo escribiremos las líneas pertinentes.
 
-![](awsImages7/aws-ejecutar-script.png)
+![](awsImages7/aws-ejecutable-script.png)
 
 Una vez hecho esto le daremos los permisos necesarios a la carpeta donde  esta el **.php**.
 
