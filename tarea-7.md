@@ -44,6 +44,12 @@ Por último cambiaremos el propietario de la carpeta donde está el script.
 
 ![](awsImages7/aws-cambiar-propietario.png)
 
+Comprobamos que las copias de seguridad se hacen correctamente.
+
+![](awsImages7/aws-hacer-copia.png)
+
+![](awsImages7/aws-comprobar-copia.png)
+
 # Borrado automatico de los backups
 
 Primero crearemos el archivo de crontab con el siguietne comando:
